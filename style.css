@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("https://img.freepik.com/free-vector/motherboard-circuit-technology-background-vector-gradient-blue_53876-126034.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Set body height to 100vh for full-screen background */
+    display: flex; /* Center form vertically and horizontally */
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    font-size: 3rem; /* Increase header font size for more prominence */
+    margin-bottom: 2rem; /* Add some space between header and form */
+    color: #fff; /* White color for visibility */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
+}
+
+main {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* Limit form width for better responsiveness */
+}
+
+label {
+    font-weight: bold;
+    display: block; /* Display labels on their own lines */
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #0062cc;
+}
+
+/* Popup Styles */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.7); /* Black background with transparency */
+    z-index: 1; /* Sit on top */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    color: white;
+    flex-direction: column; /* Arrange elements in a column */
+}
+
+.popup h2 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.popup button {
+    margin-top: 20px;
+    background-color: #b30080;
+    color: white; /* Ensure the button text is visible */
+}
