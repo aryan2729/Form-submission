@@ -1,23 +1,26 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const app = express();
-const ejs = require('ejs');
-const port = 3000;
+const form = document.querySelector('form');
+const popup = document.getElementById('popup');
+const closePopupButton = document.getElementById('close-popup');
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.set('view engine', 'ejs');
+form.addEventListener('submit', (event) => {
+  event.preventDefault(); // Prevent default form submission behavior
 
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
+  // Validate form fields
+  const nameInput = document.getElementById('name');
+  const emailInput = document.getElementById('email');
+
+  if (nameInput.value === '' || emailInput.value === '') {
+    alert('Please fill out all required fields.');
+  } else {
+    // Form is valid, submit it
+    // You can add your form submission logic here
+    // For example, you could send the form data to a server using AJAX
+
+    // Show the popup after successful submission
+    popup.style.display = 'flex';
+  }
 });
 
-// Handle POST requests to '/submit'
-app.post('/submit', (req, res) => {
-    const name = req.body.name;
-    res.render('index', { name });
-    
-});
-
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
+closePopupButton.addEventListener('click', () => {
+  popup.style.display = 'none';
 });
